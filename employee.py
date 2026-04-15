@@ -8,7 +8,6 @@ class person:
 
 class employee(person):
     def __init__(self, name, age, employee_id, department):
-        super().__init__(name, age)
         self.employee_id = employee_id
         self.department = department
     
@@ -18,8 +17,7 @@ class employee(person):
         print(f"Department: {self.department}") 
 
 class manager(employee):
-    def __init__(self, name, age, employee_id, department, team_size): 
-        super().__init__(name, age, employee_id, department)   # ✅ FIX
+    def __init__(self, name, age, employee_id, department, team_size):    
         self.team_size = team_size
     
     def display_manager(self):
